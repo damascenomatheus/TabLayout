@@ -13,6 +13,9 @@
 		A42309BB23267A2C00B97A3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A42309B923267A2C00B97A3A /* LaunchScreen.storyboard */; };
 		A42309C623267A2C00B97A3A /* YoutubeTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42309C523267A2C00B97A3A /* YoutubeTutorialTests.swift */; };
 		A42309D123267A2C00B97A3A /* YoutubeTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42309D023267A2C00B97A3A /* YoutubeTutorialUITests.swift */; };
+		A42309E02327DD9F00B97A3A /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42309DF2327DD9F00B97A3A /* VideoCell.swift */; };
+		A42309E42327DDEC00B97A3A /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42309E32327DDEC00B97A3A /* UIView+Extension.swift */; };
+		A42309E62327DF0700B97A3A /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42309E52327DF0700B97A3A /* MenuBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		A42309CC23267A2C00B97A3A /* YoutubeTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YoutubeTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A42309D023267A2C00B97A3A /* YoutubeTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeTutorialUITests.swift; sourceTree = "<group>"; };
 		A42309D223267A2C00B97A3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A42309DF2327DD9F00B97A3A /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		A42309E32327DDEC00B97A3A /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A42309E52327DF0700B97A3A /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,10 @@
 		A42309AF23267A2A00B97A3A /* YoutubeTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				A42309E22327DDCF00B97A3A /* Extensions */,
+				A42309E12327DDBF00B97A3A /* Controller */,
+				A42309DE2327DD7F00B97A3A /* View */,
 				A42309B023267A2A00B97A3A /* AppDelegate.swift */,
-				A42309B223267A2A00B97A3A /* HomeController.swift */,
 				A42309B723267A2C00B97A3A /* Assets.xcassets */,
 				A42309B923267A2C00B97A3A /* LaunchScreen.storyboard */,
 				A42309BC23267A2C00B97A3A /* Info.plist */,
@@ -120,6 +128,31 @@
 				A42309D223267A2C00B97A3A /* Info.plist */,
 			);
 			path = YoutubeTutorialUITests;
+			sourceTree = "<group>";
+		};
+		A42309DE2327DD7F00B97A3A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A42309DF2327DD9F00B97A3A /* VideoCell.swift */,
+				A42309E52327DF0700B97A3A /* MenuBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A42309E12327DDBF00B97A3A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A42309B223267A2A00B97A3A /* HomeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A42309E22327DDCF00B97A3A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A42309E32327DDEC00B97A3A /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +287,9 @@
 			files = (
 				A42309B323267A2A00B97A3A /* HomeController.swift in Sources */,
 				A42309B123267A2A00B97A3A /* AppDelegate.swift in Sources */,
+				A42309E02327DD9F00B97A3A /* VideoCell.swift in Sources */,
+				A42309E42327DDEC00B97A3A /* UIView+Extension.swift in Sources */,
+				A42309E62327DF0700B97A3A /* MenuBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

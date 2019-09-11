@@ -46,6 +46,7 @@ class VideoCell: UICollectionViewCell {
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.text = "MetallicaTV • 1,204,365,889 views • 1 year ago"
+        textView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
         return textView
     }()
     

@@ -22,7 +22,7 @@ class VideoCell: UICollectionViewCell {
     let separatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = .lightGray
+        view.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
         return view
     }()
     
@@ -45,8 +45,9 @@ class VideoCell: UICollectionViewCell {
     let videoTextView: UITextView = {
         let textView = UITextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.text = "MetallicaTV • 1,204,365,889 views • 1 year ago"
+        textView.text = "MetallicaShowTV • 1,204,365,889 views • 2 years ago"
         textView.textContainerInset = UIEdgeInsets(top: 0, left: -5, bottom: 0, right: 0)
+        textView.textColor = .lightGray
         return textView
     }()
     
@@ -82,7 +83,7 @@ class VideoCell: UICollectionViewCell {
             videoTextView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             videoTextView.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 8),
             videoTextView.trailingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor),
-            videoTextView.heightAnchor.constraint(equalToConstant: 20),
+            videoTextView.heightAnchor.constraint(equalToConstant: 30),
             
             ])
     }

@@ -20,30 +20,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         setupNavBar()
     }
     
-    let menuBar: MenuBar = {
-        let mb = MenuBar()
-        mb.translatesAutoresizingMaskIntoConstraints = false
-        return mb
-    }()
-
-    func setupMenuBar() {
-        view.addSubview(menuBar)
-        NSLayoutConstraint.activate([
-            menuBar.leadingAnchor.constraint(equalTo: self.collectionView.leadingAnchor),
-            menuBar.trailingAnchor.constraint(equalTo: self.collectionView.trailingAnchor),
-            menuBar.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
-            menuBar.heightAnchor.constraint(equalToConstant: 50)
-            ])
-    }
-    
-    func setupStatusBarView(window: UIView?) {
-        _ = StatusBarBackground(window!)
-    }
-    
-    
     func setupNavBar() {
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9019607843, green: 0.1254901961, blue: 0.1215686275, alpha: 1)
         navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
         titleLabel.textColor = .white
         titleLabel.text = "Home"
@@ -69,6 +50,25 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return 0
     }
 
+    func setupMenuBar() {
+        let menuBar: MenuBar = {
+            let mb = MenuBar()
+            mb.translatesAutoresizingMaskIntoConstraints = false
+            return mb
+        }()
+        
+        view.addSubview(menuBar)
+        NSLayoutConstraint.activate([
+            menuBar.leadingAnchor.constraint(equalTo: self.collectionView.leadingAnchor),
+            menuBar.trailingAnchor.constraint(equalTo: self.collectionView.trailingAnchor),
+            menuBar.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
+            menuBar.heightAnchor.constraint(equalToConstant: 50)
+            ])
+    }
+    
+    func setupStatusBarView(window: UIView?) {
+        _ = StatusBarBackground(window!)
+    }
 }
 
 

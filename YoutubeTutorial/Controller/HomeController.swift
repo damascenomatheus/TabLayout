@@ -14,9 +14,13 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        navigationController?.navigationBar.isTranslucent = false
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height))
+        titleLabel.textColor = .white
+        titleLabel.text = "Home"
+        navigationItem.titleView = titleLabel
         collectionView.backgroundColor = .white
         collectionView.register(VideoCell.self, forCellWithReuseIdentifier: "Home")
-        setupNavBar()
         setupMenuBar()
     }
     
@@ -34,17 +38,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             menuBar.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor, constant: 0),
             menuBar.heightAnchor.constraint(equalToConstant: 50)
             ])
-    }
-    
-    fileprivate func setupNavBar() {
-        navigationController?.navigationBar.isTranslucent = false
-        let titleView = UILabel()
-        titleView.frame = CGRect(x: 0, y: 0, width: view.frame.width - 32, height: view.frame.height)
-        titleView.font = UIFont(name: "Helvetica", size: 20)
-        titleView.text = "Home"
-        titleView.textColor = .white
-        navigationItem.titleView = titleView
-        navigationController?.navigationBar.barTintColor = .red
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -22,7 +22,7 @@ class VideoCell: UICollectionViewCell {
     let separatorView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.9019607843, blue: 0.9019607843, alpha: 1)
         return view
     }()
     
@@ -57,7 +57,7 @@ class VideoCell: UICollectionViewCell {
     }
     
     func setupView() {
-        addsubviews([thumbnailImageView,separatorView,profileImageView,titleLabel,videoTextView])
+        addSubviews([thumbnailImageView,separatorView,profileImageView,titleLabel,videoTextView])
         
         NSLayoutConstraint.activate([
             thumbnailImageView.topAnchor.constraint(equalTo: topAnchor, constant: 16),

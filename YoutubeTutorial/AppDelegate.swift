@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigation = UINavigationController(rootViewController: root)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
-        
+        navigation.navigationBar.barTintColor = #colorLiteral(red: 0.9019607843, green: 0.1254901961, blue: 0.1215686275, alpha: 1)
         
         return true
     }

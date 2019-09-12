@@ -37,17 +37,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func setupStatusBarView(window: UIView?) {
-        let statusBarBackground = UIView()
-        statusBarBackground.translatesAutoresizingMaskIntoConstraints = false
-        statusBarBackground.backgroundColor = #colorLiteral(red: 0.7607843137, green: 0.1215686275, blue: 0.1215686275, alpha: 1)
-        
-        window?.addSubview(statusBarBackground)
-        NSLayoutConstraint.activate([
-            statusBarBackground.topAnchor.constraint(equalTo: window!.topAnchor),
-            statusBarBackground.heightAnchor.constraint(equalToConstant: 20),
-            statusBarBackground.leadingAnchor.constraint(equalTo: window!.leadingAnchor),
-            statusBarBackground.trailingAnchor.constraint(equalTo: window!.trailingAnchor)
-            ])
+        _ = StatusBarBackground(window!)
     }
     
     

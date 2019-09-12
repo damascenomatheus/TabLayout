@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigation = UINavigationController(rootViewController: root)
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
-        root.setupStatusBarView(window: window)
+        _ = StatusBarBackground(window!)
         return true
     }
 

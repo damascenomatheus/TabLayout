@@ -66,9 +66,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             ])
     }
     
-    func setupStatusBarView(window: UIView?) {
-        _ = StatusBarBackground(window!)
-    }
 }
 
 

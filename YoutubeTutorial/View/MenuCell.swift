@@ -14,7 +14,7 @@ class MenuCell: BaseCell {
         let label = UILabel()
         label.lineBreakMode = .byWordWrapping
         label.textColor = .white
-        label.font = UIFont.boldSystemFont(ofSize: 25)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

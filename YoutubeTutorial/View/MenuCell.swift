@@ -29,7 +29,6 @@ class MenuCell: BaseCell {
     override var isSelected: Bool {
         didSet {
             trailLabel.textColor = isSelected ? #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0) : #colorLiteral(red: 0.3568627451, green: 0.05490196078, blue: 0.05098039216, alpha: 1)
-            
         }
     }
     

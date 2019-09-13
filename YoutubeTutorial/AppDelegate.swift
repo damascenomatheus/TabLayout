@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.main.bounds)
         let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
         let root = HomeController(collectionViewLayout: layout)
         let navigation = UINavigationController(rootViewController: root)
         window?.rootViewController = navigation

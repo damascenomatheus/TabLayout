@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VideoCell: UICollectionViewCell {
+class VideoCell: BaseCell {
     
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
@@ -51,12 +51,7 @@ class VideoCell: UICollectionViewCell {
         return textView
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
-    
-    func setupView() {
+    override func setupViews() {
         addSubviews([thumbnailImageView,separatorView,profileImageView,titleLabel,videoTextView])
         
         NSLayoutConstraint.activate([
@@ -86,11 +81,6 @@ class VideoCell: UICollectionViewCell {
             videoTextView.heightAnchor.constraint(equalToConstant: 30),
             
             ])
-    }
-    
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     

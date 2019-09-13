@@ -52,6 +52,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
 
     func setupMenuBar() {
+        navigationController?.hidesBarsOnSwipe = true
         let menuBar: MenuBar = {
             let mb = MenuBar()
             mb.translatesAutoresizingMaskIntoConstraints = false

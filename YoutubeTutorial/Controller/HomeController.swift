@@ -27,7 +27,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func setupCollectionView() {
         collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .clear
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
+        collectionView.register(ContentVideoCell.self, forCellWithReuseIdentifier: "cellId")
 
     }
     func setupNavBar() {
@@ -47,8 +47,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-        let colors:[UIColor] = [.white, .lightGray]
-        cell.backgroundColor = colors[indexPath.row]
+//        let colors:[UIColor] = [.white, .lightGray]
+//        cell.backgroundColor = colors[indexPath.row]
         return cell
     }
     

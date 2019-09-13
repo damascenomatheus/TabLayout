@@ -19,6 +19,7 @@
 		A42309E82329D1BD00B97A3A /* StatusBarBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42309E72329D1BD00B97A3A /* StatusBarBackground.swift */; };
 		A456CE05232A8F95002A3306 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A456CE04232A8F95002A3306 /* BaseCell.swift */; };
 		A456CE07232A9051002A3306 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A456CE06232A9051002A3306 /* MenuCell.swift */; };
+		A456CE09232C2A20002A3306 /* ContentVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A456CE08232C2A20002A3306 /* ContentVideoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		A42309E72329D1BD00B97A3A /* StatusBarBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarBackground.swift; sourceTree = "<group>"; };
 		A456CE04232A8F95002A3306 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		A456CE06232A9051002A3306 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		A456CE08232C2A20002A3306 /* ContentVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentVideoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				A42309E72329D1BD00B97A3A /* StatusBarBackground.swift */,
 				A456CE04232A8F95002A3306 /* BaseCell.swift */,
 				A456CE06232A9051002A3306 /* MenuCell.swift */,
+				A456CE08232C2A20002A3306 /* ContentVideoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				A42309B323267A2A00B97A3A /* HomeController.swift in Sources */,
 				A42309B123267A2A00B97A3A /* AppDelegate.swift in Sources */,
+				A456CE09232C2A20002A3306 /* ContentVideoCell.swift in Sources */,
 				A42309E02327DD9F00B97A3A /* VideoCell.swift in Sources */,
 				A42309E42327DDEC00B97A3A /* UIView+Extension.swift in Sources */,
 				A456CE05232A8F95002A3306 /* BaseCell.swift in Sources */,

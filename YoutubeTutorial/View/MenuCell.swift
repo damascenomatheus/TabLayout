@@ -34,9 +34,9 @@ class MenuCell: BaseCell {
     
     func setupTextLabel(_ index: IndexPath) {
         if(index.row == 0) {
-            trailLabel.text = "Trails"
+            trailLabel.text = "Teste1"
         } else {
-            trailLabel.text = "Post"
+            trailLabel.text = "Teste2"
         }
     }
     

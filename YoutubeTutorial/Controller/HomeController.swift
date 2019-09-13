@@ -10,6 +10,13 @@ import UIKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    lazy var menuBar: MenuBar = {
+        let mb = MenuBar()
+        mb.homeController = self
+        mb.translatesAutoresizingMaskIntoConstraints = false
+        return mb
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -21,8 +28,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .blue
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellId")
-        collectionView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
-        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 50,left: 0,bottom: 0,right: 0)
 
     }
     func setupNavBar() {
@@ -50,14 +55,19 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: view.frame.height)
     }
+    
+    func scrollToMenuIndex(_ index: Int){
+        let indexPath = IndexPath(item: index, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .init(), animated: true)
+    }
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let index = scrollView.contentOffset.x / view.frame.width
+        let indexPath = IndexPath(item: Int(index), section: 0)
+        menuBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .init())
+    }
 
     func setupMenuBar() {
-        //navigationController?.hidesBarsOnSwipe = true
-        let menuBar: MenuBar = {
-            let mb = MenuBar()
-            mb.translatesAutoresizingMaskIntoConstraints = false
-            return mb
-        }()
         
         view.addSubview(menuBar)
         NSLayoutConstraint.activate([

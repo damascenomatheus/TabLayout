@@ -16,9 +16,11 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.dataSource = self
         cv.delegate = self
-        cv.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.1254901961, blue: 0.1215686275, alpha: 1)
+        cv.backgroundColor = #colorLiteral(red: 0.9019607843, green: 0.1215686275, blue: 0.1254901961, alpha: 1)
         return cv
     }()
+    
+    var homeController: HomeController?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -30,6 +32,10 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        homeController?.scrollToMenuIndex(indexPath.item)
     }
     
     func setupCollectionView() {

@@ -24,6 +24,8 @@ class MenuBar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         super.init(frame: frame)
         setupCollectionView()
         collectionView.register(MenuCell.self, forCellWithReuseIdentifier: "menuTab")
+        let indexPath = IndexPath(item: 0, section: 0)
+        collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
     }
     
     required init?(coder aDecoder: NSCoder) {
